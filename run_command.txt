@@ -1,0 +1,8 @@
+-Using command bellow in cmder to execute all tests cases with tag Current-
+robot -d ./logs -i tagName tests\dtvgo\
+
+-Using command bellow in cmder to execute specific test case-
+robot -d ./logs -i tagName tests\dtvgo\name_of_test_file.robot
+
+-Using command bellow in cmder to execute all test cases that contains in specific file-
+robot -d ./logs tests\dtvgo\name_of_test_file.robot
