@@ -42,6 +42,7 @@ rodando keywords de evaluate
     ${var}      Evaluate        ${number} / ${number20}        #number
     ${var}      Evaluate        ${number} == ${number20}        #boolean
     ${var}      Evaluate        ${number} <= ${number20}        #boolean
+    ${path}=    Evaluate    os.environ.get("PATH")
 
 rodando keywords de catenate
     ${var}      Catenate        SEPARATOR=|     ${text}     teste2
