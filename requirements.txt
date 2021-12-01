@@ -1,0 +1,12 @@
+requests
+robotframework
+robotframework-jsonlibrary
+robotframework-pythonlibcore
+robotframework-requests
+robotframework-selenium2library
+robotframework-seleniumlibrary
+robotframework-stringformat
+selenium
+msedge-selenium-tools
+robotframework-databaselibrary
+PyMySQL

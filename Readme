@@ -32,7 +32,7 @@ pip install msedge-selenium-tools
 pip install robotframework-databaselibrary
 pip install PyMySQL
 
-To install those packages, use " pip install packageName " to download the latest version of the package
+To install all packages, use " pip install -r requirements.txt " to download the latest version of all packages
 
 ************   PYTHON VERSION    ******************
 For Windows
@@ -49,32 +49,13 @@ robot -d ./logs -i tagName -v NAME:VALUE folder\directory or folder\directory\fi
 -v NAME:VALUE           ->   Means that it'll set a global variable into the test.
 -R path/to/output.xml   ->   Means that it'll run all failed scenarios from output.xml file  
 
-For variables, always use the ENVIRONMENT and BROWSER (for Frontend tests). if you don't send those variables, the code won't
-know which browser to use or which environment to run the test.
+For variables, always use BROWSER (for Frontend tests). if you don't send those variables, the code won't
+know which browser use to run the test.
 
-e.g. -> -v ENVIRONMENT:dev -v BROWSER:chrome    ->   Run test in chrome and DEV environment
-e.g. -> -v ENVIRONMENT:stg -v BROWSER:firefox   ->   Run test in firefox and STG environment
-
-For ENVIRONMENT, there is:
-- DEV
-- STG
+e.g. -> -v BROWSER:chrome    ->   Run test in chrome
+e.g. -> -v BROWSER:firefox   ->   Run test in firefox
 
 For BROWSER there is:
 - chrome
 - firefox
 - edge
-
-*********    PROFILES    **********
-To run your regressive tests, use profiles regressive.cmd file. 
-To run this file, you'll need 4 variables.
-
-                                                      1º     2º     3º       4º
-e. g.  ->     ./resources/profiles/regressive.cmd doneANDSTG stg  chrome tests\publisher
-
-1º -> Tags: Remember that the command it's in robot, so if your tests need more than one tag, use "AND" to 
-            separate then. (e. g. FirstTagANDSecondTag)
-2º -> Environment: Send the desired environment to run your tests.
-3º -> Browser: Send the desired browser to run your tests.
-4º -> Path to your tests: Send a file or a path to run your tests inside that path.
-
-IMPORTANT: All those parameters should be separated by a single space.
