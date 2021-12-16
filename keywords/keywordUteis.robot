@@ -42,7 +42,7 @@ rodando keywords de evaluate
     ${var}      Evaluate        ${number} / ${number20}        #number
     ${var}      Evaluate        ${number} == ${number20}        #boolean
     ${var}      Evaluate        ${number} <= ${number20}        #boolean
-    ${path}=    Evaluate    os.environ.get("PATH")
+    ${path}=    Evaluate        os.environ.get("PATH")
 
 rodando keywords de catenate
     ${var}      Catenate        SEPARATOR=|     ${text}     teste2
@@ -54,8 +54,8 @@ rodando keywords de catenate
 rodando keywords de set variable if
     ${var}        Set Variable If     ${number} <= ${number20}        se der true vai setar esse      se der false vai setar esse
     ${var}        Set Variable If     not(${number} <= ${number20})        se der true vai setar esse      se der false vai setar esse
-    ${var} =  Set Variable If
-    ...  "${var}"=="None"  value1
-    ...  "${var}"=="True"  value2
-    ...  "${var}"=="False"  value3
+    ${var}          Set Variable If
+    ...  "${var}"=="None"       value1
+    ...  "${var}"=="True"           value2
+    ...  "${var}"=="False"          value3
     ...  Final else!
