@@ -11,6 +11,16 @@ chamando variavelpy
     Log     ${int_com_conta}
     Log     ${numero}
 
+Given that user is in publisher "${usuario}" "${senha}"
+    ${token}        logar       ${usuario}      ${senha}
+    Set token em algum lugar
+
+logar
+    [Arguments]     ${usuario}      ${senha}
+    kajshfasdlaksdkajshd
+    [Return]        token
+
+
 keyword com argumento obrigatorio
     [Arguments]     ${arg1}
     Log             argumento obrigatorio: ${arg1}
