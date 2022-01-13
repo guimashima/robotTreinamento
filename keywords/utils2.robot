@@ -1,5 +1,6 @@
 ***Settings***
 Variables       ../resources/variables.py
+
 ***Variables***
 @{listaVariable}        um      dois        tres
 
@@ -51,7 +52,7 @@ condicional for loop numa lista
     FOR    ${item}    IN    @{lista}
         Log    ${item}
     END
-    FOR    ${item}    IN    arg1    arg2    arg3
+    FOR    ${item}    IN    um      dois        tres
         Log    ${item}
     END
 
@@ -60,6 +61,7 @@ condicional for loop numa dict
     FOR    ${key_value_tuple}    IN    &{dict}
         Log    ${key_value_tuple}
     END
+
     FOR    ${key}    IN    @{dict}
         Log    ${key}=${dict}[${key}]
         IF      '${key}' == 'key4'
