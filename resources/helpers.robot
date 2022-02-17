@@ -4,9 +4,6 @@ Resource    page_objects.robot
 Resource    keywords.robot
 Resource    drivers.robot
 
-**Variables**
-
-
 ***Keywords***
 Open Browser
     Set browser options
@@ -23,3 +20,6 @@ Create Header and Parameter Dictionary
     ${parameters}      Create Dictionary
     Set Test Variable       ${headers}
     Set Test Variable       ${parameters}
+
+Criando Headers e Parameters
+    Create Header and Parameter Dictionary

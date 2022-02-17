@@ -1,5 +1,5 @@
 ***Settings***
-Resource    ../keywords/utils2.robot
+Resource        ../resources/helpers.robot
 
 ***Test Cases***
 
